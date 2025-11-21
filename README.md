@@ -1,16 +1,66 @@
-# React + Vite
+🚌 TravelTrucks – Camper Rental Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React, Redux Toolkit, Vite kullanılarak geliştirilmiş karavan kiralama uygulaması.
 
-Currently, two official plugins are available:
+Bu proje, TravelTrucks için geliştirilmiş bir frontend uygulamasıdır.
+Kullanıcılar karavanları görüntüleyebilir, filtreleyebilir, detaylarını inceleyebilir, yorum bırakabilir, favorilere ekleyebilir ve rezervasyon yapabilir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Live Demo
 
-## React Compiler
+🔗 Canlı Yayın (Vercel/Netlify Linki):
+(Buraya canlı projendeki linki ekle)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📦 Özellikler
+📄 Sayfalar
 
-## Expanding the ESLint configuration
+Home Page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Banner + CTA (View Now)
+
+Kataloga yönlendirme
+
+Catalog Page
+
+Backend üzerinden karavan listesi (GET /campers)
+
+Filtreleme (konum, tip, özellikler – backend side filtering)
+
+Favorilere ekleme / çıkarma (localStorage)
+
+"Load More" ile sayfalama (pagination)
+
+Yüklenme gösterimi (Loading)
+
+Kart tasarımı ve responsive grid
+
+Camper Detail Page
+
+Karavan detay bilgileri
+
+Fotoğraf galerisi (tek görsel)
+
+5 yıldızlı kullanıcı yorumları (localStorage)
+
+Rezervasyon formu + başarı bildirimi
+
+Yüklenme gösterimi
+
+🛠️ Kullanılan Teknolojiler
+🎨 Frontend
+
+React 18
+
+Vite (hızlı geliştirme ortamı)
+
+Redux Toolkit (global state management)
+
+React Router v6 (yönlendirme)
+
+Axios (API istekleri)
+
+CSS Modules / Inline Styles (basit stillendirme)
+
+📡 API
+
+Karavan verileri için mock API:
+https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers
