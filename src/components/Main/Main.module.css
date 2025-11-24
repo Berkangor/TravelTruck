@@ -1,51 +1,67 @@
 .mainContainer {
+    width: 100%;
+    min-height: 500px;
     background-image: url("../../assets/images/hero_image.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 1440px;
+    background-position: center center;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 64px;
+    padding: 40px 24px;
     position: relative;
+    overflow: hidden;
 }
 
+@media (min-width: 1200px) {
+    .mainContainer {
+        height: 100vh;
+        width: 100vw;
+
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+
+        padding-left: 100px;
+    }
+}
+
+
+
 .mainWrapper {
-    width: 100%;
+    max-width: 800px;
 }
 
 .mainTitle {
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 0.67;
-    color: var(--inputs);
-    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.1;
+    color: var(--inputs, #ffffff);
+    margin-bottom: 24px;
 }
 
 .mainText {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.33;
-    color: var(--inputs);
-    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--inputs, #ffffff);
+    margin-bottom: 50px;
 }
 
 .mainButton {
     border-radius: 200px;
-    width: 173px;
-    height: 56px;
-    background-color: var(--button);
+    width: 200px;
+    height: 60px;
+    background-color: var(--button, #3470ff);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-    color: var(--white);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: var(--white, #ffffff);
     border: none;
+    cursor: pointer;
 }
 
-.mainButton:hover {
-    background-color: var(--button-hover);
+.mainButton:hover,
+.mainButton:focus {
+    background-color: var(--button-hover, #2365e5);
 }
