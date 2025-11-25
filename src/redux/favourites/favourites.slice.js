@@ -2,14 +2,26 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const slice = createSlice({
   name: "favourites",
-  initialState: { items: [] },
+  initialState: { 
+    // Bu dizi, karavanların benzersiz ID'lerini (number veya string) tutar
+    items: [], 
+  },
   reducers: {
     toggleFavourite: (state, action) => {
-      const index = state.items.indexOf(action.payload);
-      if (index !== -1) {
-        state.items.splice(index, 1); 
+      // Favori olarak eklenip/çıkarılacak karavanın ID'sini alıyoruz
+      const itemId = action.payload; 
+
+      // Listenin bu ID'yi içerip içermediğini kontrol ediyoruz
+      const isFavourite = state.items.includes(itemId);
+
+      if (isFavourite) {
+        // Eğer zaten favoriyse (Listeden Çıkar):
+        // filter() metodu ile yeni bir dizi oluşturuyoruz, böylece splice kullanmaktan kaçınıyoruz.
+        state.items = state.items.filter(id => id !== itemId);
       } else {
-        state.items.push(action.payload); 
+        // Eğer favori değilse (Listeye Ekle):
+        // push() metodu Redux Toolkit (Immer) sayesinde güvenle kullanılabilir.
+        state.items.push(itemId);
       }
     },
   },
