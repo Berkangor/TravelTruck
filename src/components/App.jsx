@@ -16,9 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="/catalog" element={<CatalogPage />} />
-            <Route path="/catalog/:id" element={<Navigate to="features" replace />} />
-            <Route path="/catalog/:id/*" element={<DetailsPage />} />
+            <Route path="/Catalog" element={<CatalogPage />} />
+            <Route path="/Catalog/:id" element={<Navigate to="features" replace />} />
+            <Route path="/Catalog/:id/*" element={<DetailsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
