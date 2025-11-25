@@ -58,7 +58,7 @@ const TruckItem = ({ truck }) => {
           {truck.description.substring(0, 60) + "..."}
         </p>
         <Features truck={truck} />
-        <Link to={`/catalog/${truck.id}`}>
+        <Link to={`/Catalog/${truck.id}`}>
           <button type="button" className={style.itemButton}>
             Show more
           </button>
